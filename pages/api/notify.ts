@@ -64,7 +64,7 @@ const sendNotificationEmail = async (domain: Domain, settings: SettingsType) => 
       notification_email_from = '',
      } = settings;
 
-   const fromEmail = `SerpBear <${notification_email_from || 'no-reply@serpbear.com'}>`;
+   const fromEmail = `ZeniBot <${notification_email_from || 'no-reply@ZeniBot.com'}>`;
    const mailerSettings:any = { host: smtp_server, port: parseInt(smtp_port, 10) };
    if (smtp_username || smtp_password) {
       mailerSettings.auth = {};

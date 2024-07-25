@@ -2,7 +2,7 @@ const Cryptr = require('cryptr');
 const { promises } = require('fs');
 const { readFile } = require('fs');
 const Cron = require('croner');
-require('dotenv').config({ path: './.env.local' });
+require('dotenv').config({ path: './.env' });
 
 const getAppSettings = async () => {
    const defaultSettings = {

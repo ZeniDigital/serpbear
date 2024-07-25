@@ -72,7 +72,7 @@ const updateSettings = async (req: NextApiRequest, res: NextApiResponse<Settings
 };
 
 export const getAppSettings = async () : Promise<SettingsType> => {
-   const screenshotAPIKey = process.env.SCREENSHOT_API || '69408-serpbear';
+   const screenshotAPIKey = process.env.SCREENSHOT_API || '69408-ZeniBot';
    try {
       const settingsRaw = await readFile(`${process.cwd()}/data/settings.json`, { encoding: 'utf-8' });
       const failedQueueRaw = await readFile(`${process.cwd()}/data/failed_queue.json`, { encoding: 'utf-8' });

@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"..\\components\\settings\\Changelog.tsx -> react-markdown":{id:1028,files:["static/chunks/28.cabb137bdabc93b1.js"]}};

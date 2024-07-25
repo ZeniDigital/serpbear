@@ -1,0 +1,217 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "src": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$",
+      "headers": {
+        "Location": "/$1"
+      },
+      "status": 308,
+      "continue": true
+    },
+    {
+      "src": "/_next/__private/trace",
+      "dest": "/404",
+      "status": 404,
+      "continue": true
+    },
+    {
+      "src": "/404/?",
+      "status": 404,
+      "continue": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-prerender-revalidate"
+        }
+      ]
+    },
+    {
+      "src": "/500",
+      "status": 500,
+      "continue": true
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/_next/data/(.*)",
+      "dest": "/_next/data/$1",
+      "check": true
+    },
+    {
+      "handle": "resource"
+    },
+    {
+      "src": "/.*",
+      "status": 404
+    },
+    {
+      "handle": "miss"
+    },
+    {
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media)/.+",
+      "status": 404,
+      "check": true,
+      "dest": "$0"
+    },
+    {
+      "handle": "rewrite"
+    },
+    {
+      "src": "/_next/data/(.*)",
+      "dest": "/404",
+      "status": 404
+    },
+    {
+      "src": "^/domain/console/(?<slug>[^/]+?)(?:\\.rsc)(?:/)?$",
+      "dest": "/domain/console/[slug].rsc?slug=$slug"
+    },
+    {
+      "src": "^/domain/console/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/domain/console/[slug]?slug=$slug"
+    },
+    {
+      "src": "^/domain/ideas/(?<slug>[^/]+?)(?:\\.rsc)(?:/)?$",
+      "dest": "/domain/ideas/[slug].rsc?slug=$slug"
+    },
+    {
+      "src": "^/domain/ideas/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/domain/ideas/[slug]?slug=$slug"
+    },
+    {
+      "src": "^/domain/insight/(?<slug>[^/]+?)(?:\\.rsc)(?:/)?$",
+      "dest": "/domain/insight/[slug].rsc?slug=$slug"
+    },
+    {
+      "src": "^/domain/insight/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/domain/insight/[slug]?slug=$slug"
+    },
+    {
+      "src": "^/domain/(?<slug>[^/]+?)(?:\\.rsc)(?:/)?$",
+      "dest": "/domain/[slug].rsc?slug=$slug"
+    },
+    {
+      "src": "^/domain/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/domain/[slug]?slug=$slug"
+    },
+    {
+      "handle": "hit"
+    },
+    {
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|DyEOT9KvEHF\\-_ijhuqyzM)/.+",
+      "headers": {
+        "cache-control": "public,max-age=31536000,immutable"
+      },
+      "continue": true,
+      "important": true
+    },
+    {
+      "src": "/index(?:/)?",
+      "headers": {
+        "x-matched-path": "/"
+      },
+      "continue": true,
+      "important": true
+    },
+    {
+      "src": "/((?!index$).*?)(?:/)?",
+      "headers": {
+        "x-matched-path": "/$1"
+      },
+      "continue": true,
+      "important": true
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "src": "/.*",
+      "dest": "/404",
+      "status": 404
+    },
+    {
+      "src": "/.*",
+      "dest": "/500",
+      "status": 500
+    }
+  ],
+  "images": {
+    "domains": [],
+    "sizes": [
+      640,
+      750,
+      828,
+      1080,
+      1200,
+      1920,
+      2048,
+      3840,
+      16,
+      32,
+      48,
+      64,
+      96,
+      128,
+      256,
+      384
+    ],
+    "remotePatterns": [],
+    "minimumCacheTTL": 60,
+    "formats": [
+      "image/webp"
+    ],
+    "dangerouslyAllowSVG": false,
+    "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;"
+  },
+  "overrides": {
+    "404.html": {
+      "path": "404",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "500.html": {
+      "path": "500",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "domain/[slug].html": {
+      "path": "domain/[slug]",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "domain/console/[slug].html": {
+      "path": "domain/console/[slug]",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "domain/ideas/[slug].html": {
+      "path": "domain/ideas/[slug]",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "domain/insight/[slug].html": {
+      "path": "domain/insight/[slug]",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "domains.html": {
+      "path": "domains",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "index.html": {
+      "path": "index",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "login.html": {
+      "path": "login",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "research.html": {
+      "path": "research",
+      "contentType": "text/html; charset=utf-8"
+    }
+  },
+  "framework": {
+    "version": "12.3.4"
+  },
+  "crons": []
+}

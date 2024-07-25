@@ -1,0 +1,15 @@
+{
+  "projectId": "prj_GglCofHzgDXeoxYxN6Zp1l6zml4N",
+  "orgId": "team_JcDFKggvhlFKThD54DtJhafP",
+  "settings": {
+    "createdAt": 1721035162018,
+    "framework": null,
+    "devCommand": "",
+    "installCommand": null,
+    "buildCommand": "npm run vercel-build",
+    "outputDirectory": "public",
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "20.x"
+  }
+}

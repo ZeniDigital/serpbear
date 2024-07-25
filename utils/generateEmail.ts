@@ -4,10 +4,10 @@ import path from 'path';
 import { getKeywordsInsight, getPagesInsight } from './insight';
 import { readLocalSCData } from './searchConsole';
 
-const serpBearLogo = 'https://erevanto.sirv.com/Images/serpbear/ikAdjQq.png';
-const mobileIcon = 'https://erevanto.sirv.com/Images/serpbear/SqXD9rd.png';
-const desktopIcon = 'https://erevanto.sirv.com/Images/serpbear/Dx3u0XD.png';
-const googleIcon = 'https://erevanto.sirv.com/Images/serpbear/Sx3u0X9.png';
+const serpBearLogo = 'https://zenidigital.net/wp-content/uploads/2024/03/cropped-ZeniSEO-Favicon-Of-32x32.png';
+const mobileIcon = 'https://zenidigital.net/wp-content/uploads/2024/03/cropped-ZeniSEO-Favicon-Of-180x180.png';
+const desktopIcon = 'https://zenidigital.net/wp-content/uploads/2024/03/cropped-ZeniSEO-Favicon-Of-180x180.png';
+const googleIcon = 'https://zenidigital.net/wp-content/uploads/2024/03/cropped-ZeniSEO-Favicon-Of-180x180.png';
 
 type SCStatsObject = {
    [key:string]: {
@@ -104,7 +104,7 @@ const generateEmail = async (domainName:string, keywords:KeywordType[]) : Promis
    const stat = `${improved > 0 ? `${improved} Improved` : ''} 
                   ${improved > 0 && declined > 0 ? ', ' : ''} ${declined > 0 ? `${declined} Declined` : ''}`;
    const updatedEmail = emailTemplate
-         .replace('{{logo}}', `<img class="logo_img" src="${serpBearLogo}" alt="SerpBear" />`)
+         .replace('{{logo}}', `<img class="logo_img" src="${serpBearLogo}" alt="ZeniBot" />`)
          .replace('{{currentDate}}', currentDate)
          .replace('{{domainName}}', domainName)
          .replace('{{keywordsCount}}', keywordsCount.toString())
