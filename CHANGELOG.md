@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/towfiqi/serpbear/compare/v2.0.2...v2.0.4) (2024-07-25)
+
+
+### Bug Fixes
+
+* update scraping robot typo in README ([c24b630](https://github.com/towfiqi/serpbear/commit/c24b63009c48c61218ea96511b11fe1a4f2ff239))
+
+### [2.0.3](https://github.com/towfiqi/serpbear/compare/v2.0.2...v2.0.3) (2024-07-25)
+
+
+### Bug Fixes
+
+* update scraping robot typo in README ([c24b630](https://github.com/towfiqi/serpbear/commit/c24b63009c48c61218ea96511b11fe1a4f2ff239))
+
 ### [2.0.2](https://github.com/towfiqi/serpbear/compare/v2.0.1...v2.0.2) (2024-03-13)
 
 

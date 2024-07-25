@@ -1,6 +1,6 @@
 {
-  "name": "serpbear",
-  "version": "2.0.2",
+  "name": "ZeniBot",
+  "version": "2.0.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -31,6 +31,7 @@
     "cryptr": "^6.0.3",
     "dayjs": "^1.11.5",
     "dotenv": "^16.0.3",
+    "fly": "^4.6.3",
     "google-auth-library": "^9.6.3",
     "https-proxy-agent": "^5.0.1",
     "isomorphic-fetch": "^3.0.0",
@@ -51,7 +52,8 @@
     "sequelize": "^6.34.0",
     "sequelize-typescript": "^2.1.6",
     "sqlite3": "^5.1.6",
-    "umzug": "^3.6.1"
+    "umzug": "^3.6.1",
+    "vercel": "^35.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",
