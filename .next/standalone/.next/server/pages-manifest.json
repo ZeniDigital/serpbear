@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/api/adwords": "pages/api/adwords.js",
   "/api/clearfailed": "pages/api/clearfailed.js",
@@ -10,7 +11,6 @@
   "/api/ideas": "pages/api/ideas.js",
   "/api/insight": "pages/api/insight.js",
   "/api/keyword": "pages/api/keyword.js",
-  "/_error": "pages/_error.js",
   "/api/keywords": "pages/api/keywords.js",
   "/api/login": "pages/api/login.js",
   "/api/logout": "pages/api/logout.js",

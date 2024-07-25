@@ -200,43 +200,18 @@ const Footer = ({ currentVersion =""  })=>{
     const { 0: showChangelog , 1: setShowChangelog  } = (0,external_react_.useState)(false);
     const { data: changeLogs  } = useFetchChangelog();
     const latestVersionNum = changeLogs && Array.isArray(changeLogs) && changeLogs[0] ? changeLogs[0].name : "";
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
+    return /*#__PURE__*/ jsx_runtime_.jsx("footer", {
         className: "text-center flex flex-1 justify-center pb-5 items-end",
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                className: "text-gray-500 text-xs",
-                children: [
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("a", {
-                        className: "cursor-pointer",
-                        onClick: ()=>setShowChangelog(true),
-                        children: [
-                            "ZeniBot v",
-                            currentVersion || "0.0.0"
-                        ]
-                    }),
-                    currentVersion && latestVersionNum && `v${currentVersion}` !== latestVersionNum && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("a", {
-                        className: "cursor-pointer text-indigo-700 font-semibold",
-                        onClick: ()=>setShowChangelog(true),
-                        children: [
-                            " ",
-                            "| Nah ",
-                            latestVersionNum,
-                            " (latest)"
-                        ]
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(external_react_transition_group_.CSSTransition, {
-                in: showChangelog,
-                timeout: 300,
-                classNames: "settings_anim",
-                unmountOnExit: true,
-                mountOnEnter: true,
-                children: /*#__PURE__*/ jsx_runtime_.jsx(Changelog, {
-                    closeChangeLog: ()=>setShowChangelog(false)
-                })
+        children: /*#__PURE__*/ jsx_runtime_.jsx(external_react_transition_group_.CSSTransition, {
+            in: showChangelog,
+            timeout: 300,
+            classNames: "settings_anim",
+            unmountOnExit: true,
+            mountOnEnter: true,
+            children: /*#__PURE__*/ jsx_runtime_.jsx(Changelog, {
+                closeChangeLog: ()=>setShowChangelog(false)
             })
-        ]
+        })
     });
 };
 /* harmony default export */ const common_Footer = (Footer);

@@ -14,7 +14,9 @@ const Footer = ({ currentVersion = '' }: FooterProps) => {
 
    return (
       <footer className='text-center flex flex-1 justify-center pb-5 items-end'>
-         
+         <CSSTransition in={showChangelog} timeout={300} classNames="settings_anim" unmountOnExit mountOnEnter>
+             <ChangeLog closeChangeLog={() => setShowChangelog(false)} />
+         </CSSTransition>
       </footer>
    );
 };
