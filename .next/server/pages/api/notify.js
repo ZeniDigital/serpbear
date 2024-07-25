@@ -308,7 +308,7 @@ const googleIcon = "https://zenidigital.net/wp-content/uploads/2024/03/cropped-Z
     });
     const stat = `${improved > 0 ? `${improved} Improved` : ""} 
                   ${improved > 0 && declined > 0 ? ", " : ""} ${declined > 0 ? `${declined} Declined` : ""}`;
-    const updatedEmail = emailTemplate.replace("{{logo}}", `<img class="logo_img" src="${serpBearLogo}" alt="ZeniBot" />`).replace("{{currentDate}}", currentDate).replace("{{domainName}}", domainName).replace("{{keywordsCount}}", keywordsCount.toString()).replace("{{keywordsTable}}", keywordsTable).replace("{{appURL}}", "https://zenibot.vercel.app/" || 0).replace("{{stat}}", stat).replace("{{preheader}}", stat);
+    const updatedEmail = emailTemplate.replace("{{logo}}", `<img class="logo_img" src="${serpBearLogo}" alt="ZeniBot" />`).replace("{{currentDate}}", currentDate).replace("{{domainName}}", domainName).replace("{{keywordsCount}}", keywordsCount.toString()).replace("{{keywordsTable}}", keywordsTable).replace("{{appURL}}", "http://localhost:3000" || 0).replace("{{stat}}", stat).replace("{{preheader}}", stat);
     const isConsoleIntegrated = !!(process.env.SEARCH_CONSOLE_PRIVATE_KEY && process.env.SEARCH_CONSOLE_CLIENT_EMAIL);
     const htmlWithSCStats = isConsoleIntegrated ? await generateGoogeleConsoleStats(domainName) : "";
     const emailHTML = updatedEmail.replace("{{SCStatsTable}}", htmlWithSCStats);

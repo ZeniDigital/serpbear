@@ -33,6 +33,7 @@
     "dotenv": "^16.0.3",
     "fly": "^4.6.3",
     "gh": "^2.8.9",
+    "git-cli": "^0.11.0",
     "google-auth-library": "^9.6.3",
     "https-proxy-agent": "^5.0.1",
     "isomorphic-fetch": "^3.0.0",

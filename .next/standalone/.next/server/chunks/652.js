@@ -26,7 +26,7 @@ exports.modules = {
 const Sidebar = ({ domains , showAddModal  })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "sidebar pt-44 w-1/5 hidden lg:block",
+        className: "sidebar hidden lg:block",
         "data-testid": "sidebar",
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h3", {
@@ -53,7 +53,7 @@ const Sidebar = ({ domains , showAddModal  })=>{
                                 href: `/domain/${d.slug}`,
                                 passHref: true,
                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
-                                    className: `block cursor-pointer px-4 text-ellipsis max-w-[215px] overflow-hidden whitespace-nowrap rounded
+                                    className: `block cursor-pointer px-4 text-ellipsis max-w-[100%] overflow-hidden whitespace-nowrap rounded
                                         rounded-r-none ${`/domain/${d.slug}` === router.asPath || `/domain/console/${d.slug}` === router.asPath || `/domain/insight/${d.slug}` === router.asPath || `/domain/ideas/${d.slug}` === router.asPath ? "bg-white text-zinc-800 border border-r-0" : "text-zinc-500"}`,
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {

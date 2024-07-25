@@ -13,7 +13,7 @@ const Sidebar = ({ domains, showAddModal } : SidebarProps) => {
    const router = useRouter();
 
    return (
-      <div className="sidebar pt-44 w-1/5 hidden lg:block" data-testid="sidebar">
+      <div className="sidebar hidden lg:block" data-testid="sidebar">
          <h3 className="py-7 text-base font-bold text-blue-700">
             <span className=' relative top-[3px] mr-1'><Icon type="logo" size={24} color="#364AFF" /></span> ZeniBot
          </h3>
@@ -23,7 +23,7 @@ const Sidebar = ({ domains, showAddModal } : SidebarProps) => {
                                  key={d.domain}
                                  className={'my-2.5 leading-10'}>
                                     <Link href={`/domain/${d.slug}`} passHref={true}>
-                                       <a className={`block cursor-pointer px-4 text-ellipsis max-w-[215px] overflow-hidden whitespace-nowrap rounded
+                                       <a className={`block cursor-pointer px-4 text-ellipsis max-w-[100%] overflow-hidden whitespace-nowrap rounded
                                         rounded-r-none ${((`/domain/${d.slug}` === router.asPath || `/domain/console/${d.slug}` === router.asPath
                                         || `/domain/insight/${d.slug}` === router.asPath || `/domain/ideas/${d.slug}` === router.asPath)
                                         ? 'bg-white text-zinc-800 border border-r-0' : 'text-zinc-500')}`}>

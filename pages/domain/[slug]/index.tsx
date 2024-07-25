@@ -60,9 +60,9 @@ const SingleDomain: NextPage = () => {
             </Head>
          }
          <TopBar showSettings={() => setShowSettings(true)} showAddModal={() => setShowAddDomain(true)} />
-         <div className="flex w-full max-w-7xl mx-auto">
+         <div className="flex w-full mx-auto">
             <Sidebar domains={theDomains} showAddModal={() => setShowAddDomain(true)} />
-            <div className="domain_kewywords px-5 pt-10 lg:px-0 lg:pt-8 w-full">
+            <div className="domain_kewywords px-16 pt-20 lg:px-8 lg:pt-16 w-full">
                {activDomain && activDomain.domain
                ? <DomainHeader
                   domain={activDomain}

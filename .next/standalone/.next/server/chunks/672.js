@@ -219,7 +219,7 @@ const Footer = ({ currentVersion =""  })=>{
                         onClick: ()=>setShowChangelog(true),
                         children: [
                             " ",
-                            "| Update to Version ",
+                            "|  ",
                             latestVersionNum,
                             " (latest)"
                         ]
